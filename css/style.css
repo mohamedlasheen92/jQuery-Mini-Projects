@@ -1,0 +1,139 @@
+body {
+  height: 5000px;
+  /* margin: 15px 2px 40px 22px; */
+  /* padding-top: 2rem; */
+}
+
+html {
+  /* scroll-behavior: smooth; */
+  /* scroll-padding-top: 60px; */
+}
+
+* {
+  box-sizing: border-box;
+  font-family: cursive;
+  /* font-weight: bold; */
+  margin: 0;
+  padding: 0;
+  /* transition: .2s all linear; */
+}
+
+
+button {
+  /* margin: 10px 0; */
+  background-color: transparent;
+  padding: 0 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  border-width: 3px;
+  transition: all .4s;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.a {background-color: darkcyan;}
+.b {background-color: darkgoldenrod;}
+.c {background-color: darkgreen;}
+.d {background-color: darkorange;}
+.e {background-color: darkred;}
+
+section {
+  min-height: 85vh;
+  /* margin: 3rem 0; */
+  padding: 1rem;
+  font-weight: bold;
+}
+.links {
+  background-color: #ddd;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.links a {
+  text-decoration: none;
+  padding: .5rem 1rem;
+  color: darkred;
+  font-weight: bold;border: 1px solid darkred;
+}
+
+a.active {
+  background-color: darkred;
+  color: #ddd;
+  transition: .3s;
+}
+.up {
+  position: fixed;
+  z-index: 100;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  top: 0;left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0 0 0 / 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  opacity: 0;
+  transition: all .3s linear;
+}
+.popup .inner {
+  position: fixed;
+  background-color: #fff;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: .5rem;
+}
+.popup .inner h3 {
+  margin-bottom: 1rem;
+}
+.popup .inner p {
+  color: #737373;
+  line-height: 1.7;
+}
+.popup .close {
+  position: absolute;
+  top: 38%;
+  left: 62%;
+} 
+.popup.active {
+  z-index: 1;
+  opacity: 1;
+  /* display: block; */
+}
+.popups {
+  margin-top: 2rem;
+  
+}
+.progress-container {
+  margin-top: 2rem;
+  width: 50%;
+}
+.animated-progress {
+  padding: 2px;
+  margin-bottom: 1rem;
+  height: 40px;
+}
+.animated-progress span {
+  display: block;
+  background-color: darkred;
+  height: 100%;
+  width: 0;
+  text-align: right;
+  font-size: 1.5rem;
+  color: #fff;
+  padding-right: 0.5rem;
+
+}
+/* Progress bar */

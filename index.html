@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>JQuery Course</title>
+  <style></style>
+</head>
+
+<body>
+
+  <img class="up" src="images/up-arrow.png" alt="Up">
+
+  <nav class="links">
+    <a href="#" class="active" data-scroll="home">Home</a>
+    <a href="#" data-scroll="about">About</a>
+    <a href="#" data-scroll="contact">Contact</a>
+    <a href="#" data-scroll="services">Services</a>
+    <a href="#" data-scroll="portfolio">Portfolio</a>
+  </nav>
+
+
+
+  <section id="home" class="a home">
+    <h2>Home</h2>
+    <div class="popups">
+      <button type="button" data-popup="first" class="show">Show Popup 1</button>
+      <button type="button" data-popup="second" class="show">Show Popup 2</button>
+    </div>
+    <div class="popup first">
+      <div class="inner">
+        <h3>This is a First Popup</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa, sapiente!
+          Lorem ipsum dolor sit amet.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptates?
+        </p>
+      </div>
+      <button class="close" data-close="first">Close</button>
+    </div>
+    <div class="popup second">
+      <div class="inner">
+        <h3>This is a Second Popup</h3>
+        <p>
+          First 1 ipsum dolor sit amet consectetur, adipisicing elit. Culpa, sapiente!
+          Lorem ipsum dolor sit amet.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptates?
+        </p>
+      </div>
+      <button class="close" data-close="second">Close</button>
+    </div>
+
+
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <div class="animated-progress b">
+        <span data-progress="50"></span>
+      </div>
+      <div class="animated-progress b">
+        <span data-progress="80"></span>
+      </div>
+      <div class="animated-progress b">
+        <span data-progress="60"></span>
+      </div>
+      <div class="animated-progress b">
+        <span data-progress="90"></span>
+      </div>
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+  <section id="about" class="b about">
+    <h2>About</h2>
+  </section>
+  <section id="contact" class="c contact">
+    <h2>Contact</h2>
+  </section>
+  <section id="services" class="d services">
+    <h2>Services</h2>
+  </section>
+  <section id="portfolio" class="a portfolio">
+    <h2>Portfolio</h2>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
