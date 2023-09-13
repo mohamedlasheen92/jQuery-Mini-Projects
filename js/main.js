@@ -60,4 +60,35 @@ $(document).ready(function () {
   })
 
 
+  // Fixed Menu
+  $(".fixed-menu").css("left", `-${$(".fixed-menu").innerWidth()}px`);
+  $(".fixed-menu .toggler").on("click", function () {
+    const fixedMenu = $(this).parents(".fixed-menu");
+    fixedMenu.toggleClass("is-visible");
+    if (fixedMenu.hasClass("is-visible")) {
+      fixedMenu.animate({
+        left: 0,
+      }, 350);
+
+      $("body").animate({
+        paddingLeft: `${$(".fixed-menu").innerWidth()}px`,
+      }, 350)
+
+    } else {
+      fixedMenu.animate({
+        left: `-${$(".fixed-menu").innerWidth()}px`
+      }, 350);
+
+      $("body").animate({
+        paddingLeft: 0,
+      }, 350)
+
+    }
+
+
+  })
+
+
+
+
 });
