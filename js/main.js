@@ -50,9 +50,6 @@ $(document).ready(function () {
     }, {
       duration: 1000,
       easing: "swing",
-      complete: function () {
-        console.log("Animation Done!");
-      },
       step: function (num) {
         $(this).text(Math.floor(num) + "%");
       }
@@ -86,6 +83,17 @@ $(document).ready(function () {
     }
 
 
+  })
+
+  // Change Theme
+  const themeBtns = $(".fixed-menu .colors button");
+  themeBtns.each(function () {
+    console.log($(this).data("color"));
+    $(this).css("backgroundColor", `#${$(this).data("color")}`);
+  })
+
+  $(".fixed-menu .colors button").on("click", function () {
+    $("body").css("--main-color", "#" + $(this).data("color"));
   })
 
 
