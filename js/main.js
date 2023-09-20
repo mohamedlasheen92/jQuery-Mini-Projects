@@ -96,6 +96,12 @@ $(document).ready(function () {
     $("body").css("--main-color", "#" + $(this).data("color"));
   })
 
+  // Gallery
+  $(".gallery .all-imgs img").on("click", function () {
+    $(this).addClass("active").siblings().removeClass("active");
+    $(".gallery .main-img img").hide().attr("src", $(this).attr("src")).fadeIn();
+  })
+
 
 
 
