@@ -101,6 +101,21 @@ $(document).ready(function () {
     $(this).addClass("active").siblings().removeClass("active");
     $(".gallery .main-img img").hide().attr("src", $(this).attr("src")).fadeIn();
   })
+  $(".right-arrow").on("click", function () {
+    if ($(".gallery .all-imgs img.active").is(":last-child")) {
+      $(".gallery .all-imgs img").first().click();
+    } else {
+      $(".gallery .all-imgs img.active").next().click();
+    }
+
+  })
+  $(".left-arrow").on("click", function () {
+    if ($(".gallery .all-imgs img.active").is(":first-child")) {
+      $(".gallery .all-imgs img").last().click();
+    } else {
+      $(".gallery .all-imgs img.active").prev().click();
+    }
+  })
 
 
 
