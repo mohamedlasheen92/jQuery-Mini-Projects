@@ -88,7 +88,6 @@ $(document).ready(function () {
   // Change Theme
   const themeBtns = $(".fixed-menu .colors button");
   themeBtns.each(function () {
-    console.log($(this).data("color"));
     $(this).css("backgroundColor", `#${$(this).data("color")}`);
   })
 
@@ -117,6 +116,16 @@ $(document).ready(function () {
     }
   })
 
+  // Error Message
+  $(".error-msg").each(function () {
+    $(this).animate({
+      right: 0,
+    }, 500, function () {
+      $(this).delay(3000).animate({
+        right: `-${$(".error-msg").innerWidth()}px`
+      });
+    })
+  })
 
 
 
