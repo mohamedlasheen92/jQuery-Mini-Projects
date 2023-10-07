@@ -127,6 +127,16 @@ $(document).ready(function () {
     })
   })
 
+  // Form
+  let placeholderTemp = "";
+  $(".our-form form [placeholder]").on("focus", function () {
+    placeholderTemp = $(this).attr("placeholder");
+    $(this).attr("placeholder", "");
+  }).on("blur", function () {
+    $(this).attr("placeholder", placeholderTemp);
+  })
+
+
 
 
 });
