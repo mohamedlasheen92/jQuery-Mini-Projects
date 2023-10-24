@@ -128,6 +128,7 @@ $(document).ready(function () {
   })
 
   // Form
+  // Disappear the Placeholder On Focus
   let placeholderTemp = "";
   $(".our-form form [placeholder]").on("focus", function () {
     placeholderTemp = $(this).attr("placeholder");
@@ -135,8 +136,54 @@ $(document).ready(function () {
   }).on("blur", function () {
     $(this).attr("placeholder", placeholderTemp);
   })
+  // Prevent Default On Submit
+  $(".contact form").on("submit", function (event) {
+    event.preventDefault();
+    console.log(event);
+  })
+  // Show Error if The Field is Empty
+  $(".contact form [required]").on("blur", function () {
+    if ($(this).val() === '') {
+      $(this).next('span').fadeIn().delay(2000).fadeOut();
+    }
+  })
 
+  /* Add Asterisk */
+  $("<span class='asterisk'>*</span>").insertBefore(":input[required]");
+  $(".asterisk").parent("div").css("position", "relative");
+  $(".asterisk").each(function () {
+    $(this).css({
+      "position": "absolute",
+      "top": 10,
+      "left": $(this).parent("div").find(":input").innerWidth() - 20,
+      "color": "red",
+    })
+  })
 
+  // Input File
+  $(".our-form input[type='file']").wrap("<div class='cutom-file'></div>");
+  $(".cutom-file").prepend("<span>Upload Your file</span>");
+  $(".cutom-file").append('<i class="fa-solid fa-upload"></i>');
+
+  $(".our-form input[type='file']").on("change", function () {
+    $(this).prev("span").text($(this).val());
+  })
+
+  // Unicode
+  $(".contact .uni").on("keyup", function (event) {
+    let theKey = event.keyCode || event.which;
+    $(".contact .display-uni").text(theKey);
+  })
+
+  // Change Input Direction
+  $(".contact .auto").on("keyup", function () {
+    if ($(this).val().charCodeAt(0) < 200) {
+      $(this).css("direction", "ltr");
+    } else {
+      $(this).css("direction", "rtl");
+    }
+
+  })
 
 
 });

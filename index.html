@@ -114,17 +114,36 @@
       </div>
     </div>
   </section>
+
+
   <section id="contact" class="c contact">
     <h2>Contact</h2>
     <section class="our-form">
       <form>
-        <input type="text" placeholder="Your name">
-        <input type="email" placeholder="Your email">
-        <input type="password" placeholder="Your password">
-        <textarea placeholder="Your message"></textarea>
+        <div>
+          <input type="text" placeholder="Your name" required>
+          <span class="theMsg">Please Fill this Field1</span>
+        </div>
+        <div>
+          <input type="email" placeholder="Your email" required>
+          <span class="theMsg">Please Fill this Field2</span>
+        </div>
+        <div>
+          <input type="password" placeholder="Your password" required>
+          <span class="theMsg">Please Fill this Field3</span>
+        </div>
+        <input type="file">
         <input type="submit" value="Send">
       </form>
     </section>
+    <div class="unicode">
+      <input type="text" class="uni">
+      <span class="display-uni">Display Unicode</span>
+    </div>
+    <div class="auto-direction">
+      <input type="text" class="auto">
+      <span class="what">Auto Direction</span>
+    </div>
   </section>
   <section id="services" class="d services">
     <h2>Services</h2>
